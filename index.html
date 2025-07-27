@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevgi Aşevi - Ankara</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --secondary: #f39c12;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: var(--primary);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #fff !important;
+        }
+        .carousel-item img {
+            height: 80vh;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+        .carousel-caption {
+            bottom: 25%;
+        }
+        .carousel-caption h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .section-title {
+            color: var(--primary);
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        .btn-donate {
+            background: var(--secondary);
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-donate:hover {
+            background: #e67e22;
+            color: #fff;
+        }
+        .feature-box {
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .donor-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .donor-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .donor-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background: var(--dark);
+            color: #aaa;
+            padding: 40px 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        .bank-info {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SEVGİ AŞEVİ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#amacimiz">Amacımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bagis">Bağış Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bagiscilar">Bağışçılarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iletisim">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1541802645635-11f2286a7482?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Aşevi Görsel">
+                <div class="carousel-caption">
+                    <h2>Sevgi Aşevi</h2>
+                    <p class="lead">İnsani değerlerimizi yaşatmanın ve toplumsal dayanışmayı güçlendirmenin bir yolu</p>
+                    <a href="#bagis" class="btn btn-lg btn-donate mt-3">Bağış Yap</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Yemek Dağıtımı">
+                <div class="carousel-caption">
+                    <h2>Günlük 2500-3000 Kişiye Sıcak Yemek</h2>
+                    <p class="lead">Güvenli ve hijyenik bir ortamda hazırlanan besleyici öğünler</p>
+                    <a href="#amacimiz" class="btn btn-lg btn-donate mt-3">Amacımız</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1593113616828-6f22bca04804?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Gönüllüler">
+                <div class="carousel-caption">
+                    <h2>Gönüllülerimizle Güçlüyüz</h2>
+                    <p class="lead">Siz de bu anlamlı yolculuğa katılın</p>
+                    <a href="#iletisim" class="btn btn-lg btn-donate mt-3">Bize Katılın</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- HAKKIMIZDA -->
+    <section id="hakkimizda" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">HAKKIMIZDA</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="C:\Users\vizyon\Desktop\wahibehc\aşevi\foto1.jpg" class="img-fluid rounded shadow" alt="Sevgi Aşevi">
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">Sevgi Aşevi, Ankara'da ihtiyaç sahipleri için ücretsiz yemek dağıtımı yapan bir sosyal dayanışma projesidir.</p>
+                    <p>Bu proje, sadece açlığı gidermekten öte, insani değerlerimizi yaşatmanın ve toplumsal dayanışmayı güçlendirmenin bir yoludur. Günümüzde maalesef birçok insan, temel beslenme ihtiyacını karşılamakta zorlanmaktadır.</p>
+                    <p>Sevgi Aşevi olarak, günlük 500 aileye (toplam 2500-3000 kişi) sıcak ve besleyici öğün sunmayı hedefliyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMACIMIZ -->
+    <section id="amacimiz" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">AMACIMIZ</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box bg-white">
+                        <i class="bi bi-people-fill feature-icon"></i>
+                        <h4>Kimlere Ulaşıyoruz?</h4>
+                        <ul class="mt-3">
+                            <li>Mülteci ve Geçici koruma altındaki insanlar</li>
+                            <li>Yaşlı ve yalnız yaşayan bireyler</li>
+                            <li>Ekonomik güçlük yaşayan aileler</li>
+                            <li>Geçici finansal krizde olan kişiler</li>
+                            <li>Sokakta yaşam mücadelesi veren insanlar</li>
+                            <li>Öğrenciler ve düşük gelirli çalışanlar</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-box bg-white">
+                        <i class="bi bi-heart-fill feature-icon"></i>
+                        <h4>Hedeflerimiz</h4>
+                        <ul class="mt-3">
+                            <li>Günlük 500 aileye (toplam 2500-3000 kişi) sıcak ve besleyici öğün sunmak</li>
+                            <li>Güvenli ve hijyenik bir gıda sunmak</li>
+                            <li>Toplumsal dayanışmayı güçlendirmek</li>
+                            <li>İnsan onurunu koruyarak yardım etmek</li>
+                            <li>Sürdürülebilir bir sosyal yardım modeli oluşturmak</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAĞIŞ YAP -->
+    <section id="bagis" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">BAĞIŞ YAP</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">Banka Hesap Bilgileri</h4>
+                            <div class="bank-info">
+                                <p class="mb-1"><strong>Banka:</strong> VakıfBank (Swift Kod: TVBATR2A)</p>
+                                <p class="mb-1"><strong>TL:</strong> TR26 0001 5001 5800 7306 1334 67</p>
+                                <p class="mb-1"><strong>USD:</strong> TR26 0001 5001 5804 8016 5560 33</p>
+                                <p class="mb-1"><strong>EURO:</strong> TR37 0001 5001 5804 8016 5560 29</p>
+                            </div>
+                            <p class="text-center mt-4">Bağışlarınız için teşekkür ederiz. Her katkı, bir insanın hayatına dokunmak demektir.</p>
+                            <div class="text-center mt-3">
+                                <button class="btn btn-donate" data-bs-toggle="modal" data-bs-target="#bagisModal">
+                                    <i class="bi bi-credit-card me-2"></i>Şimdi Bağış Yap
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAĞIŞÇILARIMIZ -->
+    <section id="bagiscilar" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">BAĞIŞÇILARIMIZ</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-4">
+                            <p class="text-center mb-4">Sevgi Aşevi'ne destek olan tüm bağışçılarımıza teşekkür ederiz.</p>
+                            <div class="donor-list">
+                                <div class="donor-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="bi bi-person-circle me-2"></i>Ahmet Yılmaz</span>
+                                        <span class="text-muted">12.05.2023</span>
+                                    </div>
+                                </div>
+                                <div class="donor-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="bi bi-person-circle me-2"></i>Ayşe Kaya</span>
+                                        <span class="text-muted">10.05.2023</span>
+                                    </div>
+                                </div>
+                                <div class="donor-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="bi bi-person-circle me-2"></i>Mehmet Demir</span>
+                                        <span class="text-muted">08.05.2023</span>
+                                    </div>
+                                </div>
+                                <div class="donor-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="bi bi-person-circle me-2"></i>Zeynep Şahin</span>
+                                        <span class="text-muted">05.05.2023</span>
+                                    </div>
+                                </div>
+                                <div class="donor-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="bi bi-person-circle me-2"></i>Ali Öztürk</span>
+                                        <span class="text-muted">01.05.2023</span>
+                                    </div>
+                                </div>
+                                <!-- Daha fazla bağışçı eklenebilir -->
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-outline-primary">Tüm Bağışçıları Gör</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞ -->
+    <section id="iletisim" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">İLETİŞİM</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <form class="card shadow border-0">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Bize Ulaşın</h4>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">İletişim Bilgileri</h4>
+                            <p><i class="bi bi-envelope-fill me-2 text-primary"></i> sevgiasevi@gmail.com</p>
+                            <p><i class="bi bi-geo-alt-fill me-2 text-primary"></i> Ankara, Türkiye</p>
+                            <h5 class="mt-4 mb-3">Sosyal Medya</h5>
+                            <div class="social-icons">
+                                <a href="https://x.com/sevgi15958" target="_blank"><i class="bi bi-twitter"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61578531850994&locale=tr_TR" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/sevgiasevi1/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4 class="text-white">Sevgi Aşevi</h4>
+                    <p>İnsani değerlerimizi yaşatmanın ve toplumsal dayanışmayı güçlendirmenin bir yolu.</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-white">Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hakkimizda" class="text-light">Hakkımızda</a></li>
+                        <li><a href="#amacimiz" class="text-light">Amacımız</a></li>
+                        <li><a href="#bagis" class="text-light">Bağış Yap</a></li>
+                        <li><a href="#bagiscilar" class="text-light">Bağışçılarımız</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-white">İletişim</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:sevgiasevi@gmail.com" class="text-light"><i class="bi bi-envelope me-2"></i>sevgiasevi@gmail.com</a></li>
+                        <li><a href="https://twitter.com/sevgi15958" class="text-light"><i class="bi bi-twitter me-2"></i>sevgi15958</a></li>
+                        <li><a href="https://facebook.com/SevgiAsevi" class="text-light"><i class="bi bi-facebook me-2"></i>Sevgi Aşevi</a></li>
+                        <li><a href="https://instagram.com/sevgiasevi1" class="text-light"><i class="bi bi-instagram me-2"></i>sevgiasevi1</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Sevgi Aşevi. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BAĞIŞ MODAL -->
+    <div class="modal fade" id="bagisModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bağış Yap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bağışınız için teşekkür ederiz. Aşağıdaki banka hesaplarına havale/EFT yapabilirsiniz:</p>
+                    <div class="bank-info">
+                        <p class="mb-1"><strong>Banka:</strong> VakıfBank (Swift Kod: TVBATR2A)</p>
+                        <p class="mb-1"><strong>TL:</strong> TR26 0001 5001 5800 7306 1334 67</p>
+                        <p class="mb-1"><strong>USD:</strong> TR26 0001 5001 5804 8016 5560 33</p>
+                        <p class="mb-1"><strong>EURO:</strong> TR37 0001 5001 5804 8016 5560 29</p>
+                    </div>
+                    <p class="mt-3">Açıklama kısmına "Sevgi Aşevi Bağış" yazmanızı rica ederiz.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
